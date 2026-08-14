@@ -33,3 +33,31 @@ if __name__ == "__main__":
 
     for i in range(len(arr)):
         print(arr[i], end=" ")
+
+
+# [Better Approach] Using Temporary Array - O(n) Time and O(n) Space
+
+# Python Program to left rotate the array by d positions
+# using temporary array
+
+# Function to rotate array
+def rotateArr(arr, d):
+    n = len(arr)
+    d %= n
+    temp = [0] * n
+    for i in range(n - d):
+        temp[i] = arr[d + i]
+
+    for i in range(d):
+        temp[n - d + i] = arr[i]
+
+    for i in range(n):
+        arr[i] = temp[i]
+
+if __name__ == "__main__":
+    arr = [1, 2, 3, 4, 5, 6]
+    d = 2
+
+    rotateArr(arr, d)
+    for i in range(len(arr)):
+        print(arr[i], end=" ")
