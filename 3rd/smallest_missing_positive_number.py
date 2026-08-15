@@ -43,7 +43,7 @@ if __name__ == "__main__":
     print(missingNumber(arr))
 
 
-# // Optimal Approach Using Cycle Sort - O(n) Time and O(1) Space    
+# Optimal Approach Using Cycle Sort - O(n) Time and O(1) Space    
 
 def missingNumber(arr):
 
