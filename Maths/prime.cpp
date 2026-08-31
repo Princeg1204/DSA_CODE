@@ -44,4 +44,10 @@ bool isPrime_fastest(long n) // O(sqrt(n)/3)
     }
     return true; // O(1)
 }
+int main()
+{
+    long n;
+    cin >> n;
+    cout << isPrime(n) << "\n";
+}
 
