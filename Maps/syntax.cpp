@@ -53,5 +53,24 @@ void printing_map(mii &plus1)
         cout << key << "\t" << value << "\n";
     }
 }
+void populating_map(map<int, int> &plus1)
+{
+    plus1[1] = 2;
+    plus1.insert({2, 3});
+    plus1.insert(make_pair(3, 4));
+    pair<int, int> p = {4, 5};
+    plus1.insert(p);
+}
+void solve()
+{
+    map<int, int> plus1;
+    populating_map(plus1);
+    printing_map(plus1);
+}
+
+int main()
+{
+    solve();
+}
 
 
